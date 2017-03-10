@@ -1,10 +1,18 @@
-<h1>Be creative and create a new cocktail</h1>
+<div class="big-wraper">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path('new.jpg')%>');">
+    <div class="banner-content">
+      <h1>Be creative !</h1>
+    </div>
+</div>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
+<div class="form">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
 
-  <%= f.input :name %>
-  <%= f.input :photo, as: :attachinary %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :attachinary %>
 
-  <%= f.button :submit %>
-<% end %>
+    <%= f.button :submit, class: "navbar-wagon-button"%>
+  <% end %>
+  </div>
+</div>
