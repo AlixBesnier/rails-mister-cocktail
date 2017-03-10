@@ -1,23 +1,26 @@
-<h1>Here's the list of our amazing Cocktails</h1>
+<div class="wrapper">
+  <div class="main-title text-center">
+    <h1>Our amazing Cocktails</h1>
+  </div>
 
-<div class="container">
-  <div class="row">
-    <ul>
-      <%@cocktails.each do |cocktail|%>
-        <div class="col-xs-12 col-sm-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/images/background.jpg');">
-            <div class="card-description">
-              <li>
-                <%= link_to(cocktail.name, cocktail_path(cocktail.id), class: "lien") %>
-              </li>
+  <div class="container">
+    <div class="row">
+        <%@cocktails.each do |cocktail|%>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path(cocktail.name.downcase + '.jpg')%>);">
+              <div class="card-description">
+                  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              </div>
+              <%=link_to "",cocktail_path(cocktail), class: "card-link"%>
             </div>
           </div>
-        </div>
-      <%end%>
-    </ul>
+        <%end%>
+    </div>
+  </div>
+
+
+  <div class="text-center">
+  <%= link_to t(".top_call_to_action", default: "Create Cocktail"), new_cocktail_path, class: " bttn-red btn" %>
   </div>
 </div>
-
-
-
-<%= link_to("Create a new cocktail", new_cocktail_path)%>

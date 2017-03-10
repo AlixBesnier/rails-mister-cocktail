@@ -4,6 +4,8 @@
   background-size: cover !important;
   color: white;
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .card-user {
   position: absolute;
@@ -21,13 +23,13 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+  }
 }
 
-.lien {
-  color: white;
-  font-size: 24px;
-  text-decoration: none;
-}
 .card-description h2 {
   font-size: 24px;
 }
