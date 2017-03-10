@@ -22,7 +22,6 @@
 }
 
 .main-title {
-  margin-top: 80px;
   margin-bottom: 80px;
   border-bottom : 1px solid #000;
   width: 500px;
@@ -31,6 +30,10 @@
 }
 
 .wrapper {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background: linear-gradient(45deg, white,#E8DADA );
+  margin-top: 50px;
+  padding-top: 20px;
+  border-radius: 4px;
 }
